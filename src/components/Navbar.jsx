@@ -8,23 +8,24 @@ import Container from 'react-bootstrap/Container'
 
 function NavigationBar() {
     return (
-        <Navbar bg="light" expand="lg" fixed='top'>
+        <Navbar bg="light" expand="lg" fixed="top">
             <Navbar.Brand href="#">
                 <img
-                alt=""
-                src="./src/images/logo.svg"
-                height="32"
-                className="d-inline-block align-top"
-                />{' '}
+                    alt=""
+                    src="./src/images/logo.svg"
+                    height="32"
+                    className="d-inline-block align-top"
+                />
+                {' '}
             </Navbar.Brand>
-                
+
             <Container>
                 <Form className="d-flex">
                     <FormControl
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
                     />
                 </Form>
 

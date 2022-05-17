@@ -19,6 +19,7 @@ module.exports = {
     "semi": [1, "never"],
     "indent": ["error", 4],
     "react/jsx-indent" : ["error", 4],
+    "react/jsx-indent-props" : ["error", 4],
     "react/prop-types": "off"
   }
   ,
