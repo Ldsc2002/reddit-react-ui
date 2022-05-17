@@ -1,14 +1,41 @@
 require('@babel/register');
-const webpackMerge = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
-const common = require('./config/webpack/webpack.common.babel');
-
-const envs = {
-    development: 'dev',
-    production: 'prod'
-};
-
-/* eslint-disable global-require,import/no-dynamic-require */
-const env = envs[process.env.NODE_ENV || 'development'];
-const envConfig = require(`./config/webpack/webpack.${env}.babel`);
-module.exports = webpackMerge(common, envConfig);
+module.exports = {
+  entry: '/src/index.jsx',
+  output: {
+    path: __dirname + '/dist',
+    filename: 'index_bundle.js'
+  },
+  resolve:{
+    extensions:['.js','.jsx']
+ },
+  plugins: [
+    new HtmlWebpackPlugin()
+  ], 
+  module: {
+    rules: [
+      {
+        test: /\.(jsx|js)$/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', {
+                "targets": "defaults" 
+              }],
+              '@babel/preset-react'
+            ]
+          }
+        }]
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      }
+    ]
+  }
+}
