@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import NavigationBar from './components/Navbar'
+import Posts from './components/Posts'
 
 function App() {
-    const [data, setData] = useState([])
-    useEffect(() => {
-        fetch('https://www.reddit.com/hot.json').then(
-            (res) => setData(res.data),
-        )
-    })
-
-    console.log(data)
-
     return (
         <div>
             <NavigationBar />
 
-            <p>This is a test</p>
+            <Posts />
         </div>
     )
 }

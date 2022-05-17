@@ -13,16 +13,19 @@ module.exports = {
  },
   plugins: [
     new HtmlWebpackPlugin({
-        title: 'Reddit - Dive into anything',
         favicon: 'src/images/icon.svg',
         templateContent: `
         <!DOCTYPE html>
         <html>
+            <head>
+                <title>Reddit - Dive into anything</title>
+            </head>
+
             <body>
                 <div id="root"></div>
             </body>
         </html>
-      `
+      `,
     })
   ], 
   module: {
