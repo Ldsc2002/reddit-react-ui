@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Post from './Post'
 
 function Posts() {
     const [data, setData] = useState([])
@@ -12,7 +13,7 @@ function Posts() {
         }, [])
 
     return (
-        <>{data.map( d => <div key={d.data.name}>{d.data.name}</div>)}</>
+        <div className='posts-container'>{data.map(element => <Post key={element.data.name} data={element.data}></Post>)}</div>
     )
 }
 
