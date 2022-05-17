@@ -16,6 +16,7 @@ module.exports = {
         title: 'Reddit - Dive into anything',
         favicon: 'src/images/icon.svg',
         templateContent: `
+        <!DOCTYPE html>
         <html>
             <body>
                 <div id="root"></div>
