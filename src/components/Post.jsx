@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Post( {data} ) {
+    const [imageDisplay, setImageDisplay] = useState('none')
+    const [videoDisplay, setVideoDisplay] = useState('none')
+
+    if (data.post_hint === 'image' && imageDisplay === 'none') {
+        setImageDisplay('block')
+    }
 
     return (
         <div className='post-card'>
@@ -15,6 +21,9 @@ function Post( {data} ) {
                 </div>
                 
                 <p className='post-title'>{data.title}</p>
+
+                <img className='card-image' style={{display: imageDisplay}} src={data.url} ></img> 
+                
             </div>
         </div>
     )
