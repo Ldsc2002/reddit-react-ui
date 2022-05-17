@@ -1,0 +1,58 @@
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-card {
+    display: flex;
+    width: 640px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.inline {
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+}
+
+.author-name {
+    color: grey;
+    font-size: 12px;
+}
+
+.subreddit-name {
+    font-weight: bold;  
+    font-size: 14px;
+}
+
+.card-top {
+    margin: 6px 0px 6px 0px;
+}
+
+.sidebar-card {
+    width: 40px;
+    background-color: rgb(246, 247, 249);
+}
+
+.card-content {
+    width: 600px;
+}
+
+.join-btn {
+    color: white;
+    background-color: #0a62c8;
+    border: none;
+    float: right;
+    font-size: 12px;
+    border-radius: 12px;
+    width: 45px;
+    height: 24px;
+    margin: 0px 6px 0px 0px;
+    font-weight: bold;
+}
+
+.post-title {
+    font-weight: bold;
+    margin: 0px 10px 0px 10px;
+}
