@@ -12,7 +12,17 @@ module.exports = {
     extensions:['.js','.jsx']
  },
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+        title: 'Reddit - Dive into anything',
+        favicon: 'src/images/icon.svg',
+        templateContent: `
+        <html>
+            <body>
+                <div id="root"></div>
+            </body>
+        </html>
+      `
+    })
   ], 
   module: {
     rules: [
