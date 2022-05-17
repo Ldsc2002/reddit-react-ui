@@ -8,7 +8,14 @@ function NavigationBar() {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="#home">
+                    <img
+                    alt=""
+                    src="./src/images/logo.svg"
+                    height="40"
+                    className="d-inline-block align-top"
+                    />{' '}
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
