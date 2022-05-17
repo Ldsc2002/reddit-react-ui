@@ -2,10 +2,20 @@ import React, { useState } from 'react'
 
 function Post({ data }) {
     const [imageDisplay, setImageDisplay] = useState('none')
+    const [linkDisplay, setLinkDisplay] = useState('none')
 
     if (data.post_hint === 'image' && imageDisplay === 'none') {
         setImageDisplay('block')
     }
+
+    if (data.domain.split(".")[0] != 'self' && linkDisplay === 'none') {
+        setLinkDisplay('block')
+        data.url = truncate(data.url, 25)
+    }
+
+    function truncate(str, n){
+        return (str.length > n) ? str.substr(0, n-1) + '...' : str;
+    };
 
     return (
         <div className="post-card">
@@ -24,6 +34,8 @@ function Post({ data }) {
                 </div>
 
                 <p className="post-title">{data.title}</p>
+
+                <a className='post-link' style={{ display: linkDisplay }} href={data.url}>{data.url}</a>
 
                 <img alt="Post" className="card-image" style={{ display: imageDisplay }} src={data.url} />
 

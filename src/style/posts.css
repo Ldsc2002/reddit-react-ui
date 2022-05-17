@@ -60,7 +60,12 @@
 
 .post-title {
     font-weight: bold;
+    margin: 0px 10px 0px 10px;
+}
+
+.post-link {
     margin: 0px 10px 10px 10px;
+    font-size: 11px;
 }
 
 .subreddit-image {
