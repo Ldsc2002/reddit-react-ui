@@ -10,7 +10,7 @@ function Post({ data }) {
 
     if (data.domain.split(".")[0] != 'self' && linkDisplay === 'none') {
         setLinkDisplay('block')
-        data.url = truncate(data.url, 25)
+        data.short_url = truncate(data.url, 25)
     }
 
     function truncate(str, n){
@@ -35,7 +35,7 @@ function Post({ data }) {
 
                 <p className="post-title">{data.title}</p>
 
-                <a className='post-link' style={{ display: linkDisplay }} href={data.url}>{data.url}</a>
+                <a className='post-link' style={{ display: linkDisplay }} href={data.url}>{data.short_url}</a>
 
                 <img alt="Post" className="card-image" style={{ display: imageDisplay }} src={data.url} />
 

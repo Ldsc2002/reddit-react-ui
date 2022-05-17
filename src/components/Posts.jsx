@@ -4,7 +4,7 @@ import Post from './Post'
 function Posts() {
     const [data, setData] = useState([])
     useEffect(() => {
-        fetch('src/data/hot.json').then(
+        fetch('https://www.reddit.com/hot.json').then(
             (response) => response.json(),
         ).then(
             (json) => (
