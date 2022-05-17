@@ -13,17 +13,19 @@
 
 .inline {
     display: inline-block;
-    margin: 0px 0px 0px 10px;
 }
 
 .author-name {
     color: grey;
     font-size: 12px;
+    margin: 0px 0px 0px 10px;
 }
 
 .subreddit-name {
     font-weight: bold;  
     font-size: 14px;
+    margin: 0px 0px 0px 6px;
+
 }
 
 .card-top {
@@ -58,5 +60,11 @@
 
 .post-title {
     font-weight: bold;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 10px 10px;
+}
+
+.subreddit-image {
+    width: 20px;
+    margin: 0px 0px 0px 10px;
+    vertical-align: text-bottom;
 }

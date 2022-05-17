@@ -15,6 +15,7 @@ function Post( {data} ) {
             </div>
             <div className='card-content'>
                 <div className='card-top'>
+                    <img className='inline subreddit-image' src='./src/images/icon.svg'></img>
                     <p className='inline subreddit-name'>{data.subreddit_name_prefixed}</p>
                     <p className='inline author-name'>Posted by u/{data.author}</p>
                     <button className='inline join-btn'>Join</button>
