@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 function Post({ data }) {
+    const [score, setScore] = useState(0)
     const [imageDisplay, setImageDisplay] = useState('none')
     const [linkDisplay, setLinkDisplay] = useState('none')
 
@@ -13,14 +14,16 @@ function Post({ data }) {
         data.short_url = truncate(data.url, 25)
     }
 
-    function truncate(str, n){
-        return (str.length > n) ? str.substr(0, n-1) + '...' : str;
-    };
+    if (score === 0) {
+        setScore(numFormatter(data.score))
+    }
 
     return (
         <div className="post-card">
             <div className="sidebar-card">
-                <p>P</p>
+                <p>up</p>
+                <p>{score}</p>
+                <p>down</p>
             </div>
             <div className="card-content">
                 <div className="card-top">
@@ -42,6 +45,18 @@ function Post({ data }) {
             </div>
         </div>
     )
+
+    function truncate(str, n){
+        return (str.length > n) ? str.substr(0, n-1) + '...' : str;
+    };
+
+    function numFormatter(num) {
+        if (Math.abs(num) < 100000) {
+            return Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k'
+        } else {
+            return Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k'
+        }
+    }
 }
 
 export default Post
