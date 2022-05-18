@@ -43,7 +43,15 @@
 }
 
 .card-image {
-    width: 100%;
+    max-width: 100%;
+    margin: 0px auto 0px auto;
+}
+
+.card-thumbnail {
+    width: 144px;
+    float: right;
+    border-radius: 5px;
+    margin: 0px 8px 0px 0px;
 }
 
 .join-btn {
@@ -106,4 +114,12 @@
     background-color: rgb(217, 217, 217);
     color: black;
     border-radius: 5px;
+}
+
+.content-container {
+    display: flex;
+}
+
+.post-content {
+    width: 100%;
 }

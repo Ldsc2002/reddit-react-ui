@@ -4,10 +4,13 @@ function Post({ data }) {
     const [score, setScore] = useState(0)
     const [comments, setComments] = useState(0)
     const [imageDisplay, setImageDisplay] = useState('none')
+    const [thumbnailDisplay, setThumbnailDisplay] = useState('none')
     const [linkDisplay, setLinkDisplay] = useState('none')
 
     if (data.post_hint === 'image' && imageDisplay === 'none') {
         setImageDisplay('block')
+    } else if (data.post_hint === 'link' && thumbnailDisplay === 'none') {
+        setThumbnailDisplay('block')
     }
 
     if (data.domain.split(".")[0] != 'self' && linkDisplay === 'none') {
@@ -41,11 +44,17 @@ function Post({ data }) {
                     <button type="button" className="inline join-btn">Join</button>
                 </div>
 
-                <p className="post-title">{data.title}</p>
+                <div className='content-container'>
+                    <div className='post-content'>
+                        <p className="post-title">{data.title}</p>
 
-                <a className='post-link' style={{ display: linkDisplay }} href={data.url}>{data.short_url}</a>
+                        <a className='post-link' style={{ display: linkDisplay }} href={data.url}>{data.short_url}</a>
 
-                <img alt="Post" className="card-image" style={{ display: imageDisplay }} src={data.url} />
+                        <img alt="Post" className="card-image" style={{ display: imageDisplay }} src={data.url} />
+                    </div>
+
+                    <img alt="Post" className="card-thumbnail" style={{ display: thumbnailDisplay }} src={data.thumbnail} />
+                </div>
 
                 <div className="card-top">
                     <a className='post-options'>
@@ -76,8 +85,8 @@ function Post({ data }) {
     };
 
     function numFormatter(num) {
-        if (Math.abs(num) < 100000) {
-            return Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k'
+        if (Math.abs(num) < 1000) {
+            return Math.sign(num)*(Math.abs(num))
         } else {
             return Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k'
         }
