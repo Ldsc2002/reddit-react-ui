@@ -88,7 +88,9 @@
 }
 
 .post-score {
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0px 0px 2px 0px;
 }
 
 .post-options {
@@ -126,4 +128,35 @@
 
 .post-content {
     width: 100%;
+}
+
+.upvote {
+    transform: rotate(180deg);
+}
+
+.vote-container {
+    margin: 10px 0px 4px 0px;
+}
+
+.vote {
+    width: 30px;
+    height: 30px;
+    margin: 0px auto 0px auto;
+    border-radius: 2px;
+}
+
+.vote:hover {
+    background-color: rgb(217, 217, 217);
+}
+
+.vote :last-child  {
+    display: none;
+}
+
+.vote:hover :last-child {
+    display: inline;  
+}
+  
+.vote:hover :first-child {
+    display: none;  
 }
