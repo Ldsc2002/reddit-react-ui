@@ -6,6 +6,18 @@ function Post({ data }) {
     const [imageDisplay, setImageDisplay] = useState('none')
     const [thumbnailDisplay, setThumbnailDisplay] = useState('none')
     const [linkDisplay, setLinkDisplay] = useState('none')
+    const [shortLink, setShortLink] = useState('')
+
+    function truncate(str, n) {
+        return (str.length > n) ? `${str.substr(0, n - 1)}...` : str
+    }
+
+    function numFormatter(num) {
+        if (Math.abs(num) < 1000) {
+            return Math.sign(num) * (Math.abs(num))
+        }
+        return `${Math.sign(num) * ((Math.abs(num) / 1000).toFixed(1))}k`
+    }
 
     if (data.post_hint === 'image' && imageDisplay === 'none') {
         setImageDisplay('block')
@@ -13,9 +25,9 @@ function Post({ data }) {
         setThumbnailDisplay('block')
     }
 
-    if (data.domain.split(".")[0] != 'self' && linkDisplay === 'none') {
+    if (data.domain.split('.')[0] !== 'self' && linkDisplay === 'none') {
         setLinkDisplay('block')
-        data.short_url = truncate(data.url, 25)
+        setShortLink(truncate(data.url, 25))
     }
 
     if (score === 0) {
@@ -30,7 +42,7 @@ function Post({ data }) {
         <div className="post-card">
             <div className="sidebar-card">
                 <p>up</p>
-                <p className='post-score'>{score}</p>
+                <p className="post-score">{score}</p>
                 <p>down</p>
             </div>
             <div className="card-content">
@@ -44,11 +56,11 @@ function Post({ data }) {
                     <button type="button" className="inline join-btn">Join</button>
                 </div>
 
-                <div className='content-container'>
-                    <div className='post-content'>
+                <div className="content-container">
+                    <div className="post-content">
                         <p className="post-title">{data.title}</p>
 
-                        <a className='post-link' style={{ display: linkDisplay }} href={data.url}>{data.short_url}</a>
+                        <a className="post-link" style={{ display: linkDisplay }} href={data.url}>{shortLink}</a>
 
                         <img alt="Post" className="card-image" style={{ display: imageDisplay }} src={data.url} />
                     </div>
@@ -57,40 +69,32 @@ function Post({ data }) {
                 </div>
 
                 <div className="card-bottom">
-                    <a className='post-options'>
+                    <div className="post-options">
                         <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
-                        <p>{comments} Comments</p>
-                    </a>
-                    
-                    <a className='post-options'>
+                        <p>
+                            {comments}
+                            {' '}
+                            Comments
+                        </p>
+                    </div>
+
+                    <div className="post-options">
                         <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
                         <p>Share</p>
-                    </a>
+                    </div>
 
-                    <a className='post-options'>
+                    <div className="post-options">
                         <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
                         <p>Saved</p>
-                    </a>     
+                    </div>
 
-                    <a className='post-options'>
+                    <div className="post-options">
                         <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
-                    </a>               
+                    </div>
                 </div>
             </div>
         </div>
     )
-
-    function truncate(str, n){
-        return (str.length > n) ? str.substr(0, n-1) + '...' : str;
-    };
-
-    function numFormatter(num) {
-        if (Math.abs(num) < 1000) {
-            return Math.sign(num)*(Math.abs(num))
-        } else {
-            return Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k'
-        }
-    }
 }
 
 export default Post
