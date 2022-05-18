@@ -80,7 +80,7 @@ function Post({ data }) {
 
                 <div className="card-bottom">
                     <div className="post-options">
-                        <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
+                        <img alt={data.subreddit_name_prefixed} src="./src/images/comments.png" />
                         <p>
                             {comments}
                             {' '}
@@ -89,17 +89,17 @@ function Post({ data }) {
                     </div>
 
                     <div className="post-options">
-                        <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
+                        <img alt={data.subreddit_name_prefixed} src="./src/images/share.png" />
                         <p>Share</p>
                     </div>
 
                     <div className="post-options">
-                        <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
+                        <img alt={data.subreddit_name_prefixed} src="./src/images/save.png" />
                         <p>Saved</p>
                     </div>
 
                     <div className="post-options">
-                        <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
+                        <img alt={data.subreddit_name_prefixed} src="./src/images/more.png" />
                     </div>
                 </div>
             </div>
