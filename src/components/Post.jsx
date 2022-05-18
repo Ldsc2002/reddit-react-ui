@@ -61,6 +61,10 @@ function Post({ data }) {
                     <a className='post-options'>
                         <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
                         <p>Saved</p>
+                    </a>     
+
+                    <a className='post-options'>
+                        <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
                     </a>               
                 </div>
             </div>

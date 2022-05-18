@@ -90,13 +90,16 @@
 .post-options > img {
     height: 20px;
     display: inline;
-    margin: 0px 0px 0px 5px;
+    margin: 0px 5px 0px 5px;
 }
 
 .post-options > p {
     display: inline;
     vertical-align: middle;
-    margin: 0px 5px 0px 5px;
+    margin: 0px 5px 0px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: grey;
 }
 
 .post-options:hover {
