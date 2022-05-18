@@ -35,6 +35,7 @@
 .sidebar-card {
     width: 40px;
     background-color: rgb(246, 247, 249);
+    text-align: center;
 }
 
 .card-content {
@@ -72,4 +73,34 @@
     width: 20px;
     margin: 0px 0px 0px 10px;
     vertical-align: text-bottom;
+}
+
+.post-score {
+    font-size: 10px;
+}
+
+.post-options {
+    color: black;
+    display: inline-block;
+    margin: 0px 3px 0px 3px;
+    text-decoration: none;
+    height: 30px;
+}
+
+.post-options > img {
+    height: 20px;
+    display: inline;
+    margin: 0px 0px 0px 5px;
+}
+
+.post-options > p {
+    display: inline;
+    vertical-align: middle;
+    margin: 0px 5px 0px 5px;
+}
+
+.post-options:hover {
+    background-color: rgb(217, 217, 217);
+    color: black;
+    border-radius: 5px;
 }

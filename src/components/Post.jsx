@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 function Post({ data }) {
     const [score, setScore] = useState(0)
+    const [comments, setComments] = useState(0)
     const [imageDisplay, setImageDisplay] = useState('none')
     const [linkDisplay, setLinkDisplay] = useState('none')
 
@@ -18,11 +19,15 @@ function Post({ data }) {
         setScore(numFormatter(data.score))
     }
 
+    if (comments === 0) {
+        setComments(numFormatter(data.num_comments))
+    }
+
     return (
         <div className="post-card">
             <div className="sidebar-card">
                 <p>up</p>
-                <p>{score}</p>
+                <p className='post-score'>{score}</p>
                 <p>down</p>
             </div>
             <div className="card-content">
@@ -42,6 +47,22 @@ function Post({ data }) {
 
                 <img alt="Post" className="card-image" style={{ display: imageDisplay }} src={data.url} />
 
+                <div className="card-top">
+                    <a className='post-options'>
+                        <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
+                        <p>{comments} Comments</p>
+                    </a>
+                    
+                    <a className='post-options'>
+                        <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
+                        <p>Share</p>
+                    </a>
+
+                    <a className='post-options'>
+                        <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
+                        <p>Saved</p>
+                    </a>               
+                </div>
             </div>
         </div>
     )
