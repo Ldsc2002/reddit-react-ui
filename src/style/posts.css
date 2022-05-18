@@ -32,6 +32,10 @@
     margin: 6px 0px 6px 0px;
 }
 
+.card-bottom {
+    margin: 6px 0px 0px 0px;
+}
+
 .sidebar-card {
     width: 40px;
     background-color: rgb(246, 247, 249);

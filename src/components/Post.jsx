@@ -56,7 +56,7 @@ function Post({ data }) {
                     <img alt="Post" className="card-thumbnail" style={{ display: thumbnailDisplay }} src={data.thumbnail} />
                 </div>
 
-                <div className="card-top">
+                <div className="card-bottom">
                     <a className='post-options'>
                         <img alt={data.subreddit_name_prefixed} src="./src/images/icon.svg" />
                         <p>{comments} Comments</p>
