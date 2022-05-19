@@ -2,3 +2,8 @@ body {
     background-color: #d6dbe2;
     margin-top: 48px;
 }
+
+.app-content {
+    display: flex;
+    justify-content: center;
+}

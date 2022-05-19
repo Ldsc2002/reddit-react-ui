@@ -1,10 +1,7 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
-import Container from 'react-bootstrap/Container'
 
 function NavigationBar() {
     return (
@@ -19,7 +16,7 @@ function NavigationBar() {
                 {' '}
             </Navbar.Brand>
 
-            <div className='nav-container'>
+            <div className="nav-container">
                 <Form className="d-flex search-bar">
                     <FormControl
                         type="search"
@@ -29,8 +26,8 @@ function NavigationBar() {
                     />
                 </Form>
 
-                <button className='account-btn login-btn'>Log In</button>
-                <button className='account-btn signup-btn'>Sign Up</button>
+                <button type='button' className="account-btn login-btn">Log In</button>
+                <button type='button' className="account-btn signup-btn">Sign Up</button>
             </div>
         </Navbar>
     )

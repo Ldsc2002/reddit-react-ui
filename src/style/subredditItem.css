@@ -1,0 +1,48 @@
+.sub-item-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    height: 49px;
+}
+
+.sub-item-container>p {
+    display: inline;
+    margin-bottom: 0px;
+}
+
+.sub-item-position {
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 10px;
+}
+
+.sub-item-name {
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 115px;
+}
+
+.sub-item-image {
+    width: 32px;
+    margin-left: 40px;
+}
+
+.sub-join-btn {
+    color: white;
+    background-color: #0a62c8;
+    border: none;
+    font-size: 12px;
+    border-radius: 12px;
+    width: 55px;
+    height: 24px;
+    margin-left: auto;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.sub-join-btn:hover {
+    filter: brightness(1.1);
+}

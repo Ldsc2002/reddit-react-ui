@@ -41,17 +41,17 @@ function Post({ data }) {
     return (
         <div className="post-card">
             <div className="sidebar-card">
-                <div className='vote-container'>
-                    <div className='vote'>
-                        <img src="./src/images/vote.png" alt="Upvote" className='upvote' />
-                        <img src="./src/images/upvote.png" alt="Upvote" className='upvote' />
+                <div className="vote-container">
+                    <div className="vote">
+                        <img src="./src/images/vote.png" alt="Upvote" className="upvote" />
+                        <img src="./src/images/upvote.png" alt="Upvote" className="upvote" />
                     </div>
 
                     <p className="post-score">{score}</p>
-                    
-                    <div className='vote'>
-                        <img src="./src/images/vote.png" alt="Downvote" className='downvote' />
-                        <img src="./src/images/downvote.png" alt="Downvote" className='downvote' />
+
+                    <div className="vote">
+                        <img src="./src/images/vote.png" alt="Downvote" className="downvote" />
+                        <img src="./src/images/downvote.png" alt="Downvote" className="downvote" />
                     </div>
                 </div>
             </div>
