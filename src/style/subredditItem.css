@@ -23,6 +23,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 115px;
+    font-size: 14px;
 }
 
 .sub-item-image {
