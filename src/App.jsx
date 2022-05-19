@@ -8,9 +8,9 @@ function App() {
         <div>
             <NavigationBar />
 
-            <div className='app-content'>
+            <div className="app-content">
                 <Posts />
-                <Sidebar/>
+                <Sidebar />
             </div>
         </div>
     )

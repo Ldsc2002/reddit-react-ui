@@ -26,8 +26,8 @@ function NavigationBar() {
                     />
                 </Form>
 
-                <button type='button' className="account-btn login-btn">Log In</button>
-                <button type='button' className="account-btn signup-btn">Sign Up</button>
+                <button type="button" className="account-btn login-btn">Log In</button>
+                <button type="button" className="account-btn signup-btn">Sign Up</button>
             </div>
         </Navbar>
     )
