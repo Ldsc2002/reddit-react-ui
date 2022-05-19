@@ -1,5 +1,7 @@
 import React from 'react'
 import SubredditItem from './SubredditItem'
+import backgroundImg from '../../src/images/sidebarBackground.png'
+import premiumImg from '../../src/images/premium-icon.png'
 
 function Sidebar() {
     const topSubs = [
@@ -14,7 +16,7 @@ function Sidebar() {
         <div>
             <div className="sidebar-container">
                 <div className="text-with-image">
-                    <img alt="" src="./src/images/sidebarBackground.png" />
+                    <img alt="" src={backgroundImg} />
                     <p>Today&apos;s Top Communities</p>
                 </div>
 
@@ -32,7 +34,7 @@ function Sidebar() {
 
             <div className="premium-sidebar-container">
                 <div className="premium-info-container">
-                    <img alt="" src="./src/images/premium-icon.png" />
+                    <img alt="" src={premiumImg} />
                     <div className="premium-text-container">
                         <p className="premium-title">Reddit Premium</p>
                         <p className="premium-info">The best Reddit experience, with monthly Coins</p>

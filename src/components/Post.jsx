@@ -1,5 +1,15 @@
 import React, { useState } from 'react'
 
+import upvoteImg from '../../src/images/upvote.png'
+import voteImg from '../../src/images/vote.png'
+import downvoteImg from '../../src/images/downvote.png'
+import subredditImg from '../../src/images/icon.svg'
+import commentImg from '../../src/images/comments.png'
+import shareImg from '../../src/images/share.png'
+import saveImg from '../../src/images/save.png'
+import moreImg from '../../src/images/more.png'
+
+
 function Post({ data }) {
     const [score, setScore] = useState(0)
     const [comments, setComments] = useState(0)
@@ -43,21 +53,21 @@ function Post({ data }) {
             <div className="sidebar-card">
                 <div className="vote-container">
                     <div className="vote">
-                        <img src="./src/images/vote.png" alt="Upvote" className="upvote" />
-                        <img src="./src/images/upvote.png" alt="Upvote" className="upvote" />
+                        <img src={voteImg} alt="Upvote" className="upvote" />
+                        <img src={upvoteImg} alt="Upvote" className="upvote" />
                     </div>
 
                     <p className="post-score">{score}</p>
 
                     <div className="vote">
-                        <img src="./src/images/vote.png" alt="Downvote" className="downvote" />
-                        <img src="./src/images/downvote.png" alt="Downvote" className="downvote" />
+                        <img src={voteImg} alt="Downvote" className="downvote" />
+                        <img src={downvoteImg} alt="Downvote" className="downvote" />
                     </div>
                 </div>
             </div>
             <div className="card-content">
                 <div className="card-top">
-                    <img alt={data.subreddit_name_prefixed} className="inline subreddit-image" src="./src/images/icon.svg" />
+                    <img alt={data.subreddit_name_prefixed} className="inline subreddit-image" src={subredditImg} />
                     <p className="inline subreddit-name">{data.subreddit_name_prefixed}</p>
                     <p className="inline author-name">
                         Posted by u/
@@ -80,7 +90,7 @@ function Post({ data }) {
 
                 <div className="card-bottom">
                     <div className="post-options">
-                        <img alt={data.subreddit_name_prefixed} src="./src/images/comments.png" />
+                        <img alt={data.subreddit_name_prefixed} src={commentImg} />
                         <p>
                             {comments}
                             {' '}
@@ -89,17 +99,17 @@ function Post({ data }) {
                     </div>
 
                     <div className="post-options">
-                        <img alt={data.subreddit_name_prefixed} src="./src/images/share.png" />
+                        <img alt={data.subreddit_name_prefixed} src={shareImg} />
                         <p>Share</p>
                     </div>
 
                     <div className="post-options">
-                        <img alt={data.subreddit_name_prefixed} src="./src/images/save.png" />
+                        <img alt={data.subreddit_name_prefixed} src={saveImg} />
                         <p>Saved</p>
                     </div>
 
                     <div className="post-options">
-                        <img alt={data.subreddit_name_prefixed} src="./src/images/more.png" />
+                        <img alt={data.subreddit_name_prefixed} src={moreImg} />
                     </div>
                 </div>
             </div>

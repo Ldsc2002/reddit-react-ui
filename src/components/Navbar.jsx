@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
+import logoImg from '../../src/images/logo.svg'
 
 function NavigationBar() {
     return (
@@ -9,7 +10,7 @@ function NavigationBar() {
             <Navbar.Brand href="#">
                 <img
                     alt=""
-                    src="./src/images/logo.svg"
+                    src={logoImg}
                     height="32"
                     className="d-inline-block align-top"
                 />
