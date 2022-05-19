@@ -46,6 +46,10 @@
     filter: brightness(1.1);
 }
 
+.small-btn-container {
+    margin-top: 6px;
+}
+
 .small-sub-btn {
     color: rgb(0, 121, 211);
     background-color: rgb(245, 246, 247);
