@@ -11,21 +11,34 @@ function Sidebar() {
     ]
 
     return (
-        <div className="sidebar-container">
-            <div className="text-with-image">
-                <img alt="" src="./src/images/sidebarBackground.png" />
-                <p>Today&apos;s Top Communities</p>
+        <div>
+            <div className="sidebar-container">
+                <div className="text-with-image">
+                    <img alt="" src="./src/images/sidebarBackground.png" />
+                    <p>Today&apos;s Top Communities</p>
+                </div>
+
+                <div className="subreddit-container">{topSubs.map((element) => <SubredditItem key={element.index} name={element.name} index={element.index} />)}</div>
+
+                <button type="button" className="view-all-btn">View All</button>
+
+                <div className="small-btn-container">
+                    <button type="button" className="small-sub-btn">Near You</button>
+                    <button type="button" className="small-sub-btn">Gaming</button>
+                    <button type="button" className="small-sub-btn">Sports</button>
+                    <button type="button" className="small-sub-btn">News</button>
+                </div>
             </div>
 
-            <div className="subreddit-container">{topSubs.map((element) => <SubredditItem key={element.index} name={element.name} index={element.index} />)}</div>
-
-            <button type="button" className="view-all-btn">View All</button>
-
-            <div className="small-btn-container">
-                <button type="button" className="small-sub-btn">Near You</button>
-                <button type="button" className="small-sub-btn">Gaming</button>
-                <button type="button" className="small-sub-btn">Sports</button>
-                <button type="button" className="small-sub-btn">News</button>
+            <div className="premium-sidebar-container">
+                <div className="premium-info-container">
+                    <img alt="" src="./src/images/premium-icon.png" />
+                    <div className="premium-text-container">
+                        <p className="premium-title">Reddit Premium</p>
+                        <p className="premium-info">The best Reddit experience, with monthly Coins</p>
+                    </div>
+                    <button className='premium-btn'>Try Now</button>
+                </div>
             </div>
         </div>
     )
