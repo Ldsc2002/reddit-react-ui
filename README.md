@@ -20,11 +20,10 @@ Reddit React UI
 
 ## Getting started
 
-1. Clone this repo using `https://github.com/leonardomso/react-bolt.git`
-2. Move to the appropriate directory: `cd react-bolt`.<br />
-3. Run `yarn` or `npm install` to install dependencies.<br />
+1. Clone this repo using
+2. Move to the appropriate directory: `cd reddit-react-ui`.<br />
+3. Run `npm install` to install dependencies.<br />
 4. Run `npm start` to see the example app at `http://localhost:8080`.
-
 
 ## Available Scripts
 
