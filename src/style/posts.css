@@ -96,22 +96,22 @@
 .post-options {
     color: black;
     display: inline-block;
-    margin: 0px 3px 0px 3px;
-    text-decoration: none;
-    height: 30px;
+    margin: 0px 3px 2px 3px;
+    height: 36px;
 }
 
 .post-options > img {
     height: 20px;
     display: inline;
-    margin: 0px 5px 0px 5px;
+    margin: 5px 5px 0px 5px;
 }
 
 .post-options > p {
     display: inline;
     vertical-align: middle;
     margin: 0px 5px 0px 0px;
-    font-size: 14px;
+    padding-top: 6px;
+    font-size: 12px;
     font-weight: bold;
     color: grey;
 }
