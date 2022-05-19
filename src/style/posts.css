@@ -8,7 +8,9 @@
     display: flex;
     width: 640px;
     background-color: white;
+    border-radius: 5px;
     margin-top: 20px;
+    border: solid 1px rgb(190, 190, 190);
 }
 
 .inline {
@@ -25,7 +27,6 @@
     font-weight: bold;  
     font-size: 14px;
     margin: 0px 0px 0px 6px;
-
 }
 
 .card-top {
@@ -40,6 +41,7 @@
     width: 40px;
     background-color: rgb(246, 247, 249);
     text-align: center;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .card-content {
