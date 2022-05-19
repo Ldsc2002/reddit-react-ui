@@ -37,7 +37,7 @@ function Sidebar() {
                         <p className="premium-title">Reddit Premium</p>
                         <p className="premium-info">The best Reddit experience, with monthly Coins</p>
                     </div>
-                    <button type='button' className="premium-btn">Try Now</button>
+                    <button type="button" className="premium-btn">Try Now</button>
                 </div>
             </div>
         </div>
