@@ -21,7 +21,7 @@ function Post({ data }) {
 
     if (data.post_hint === 'image' && imageDisplay === 'none') {
         setImageDisplay('block')
-    } else if (data.post_hint === 'link' && thumbnailDisplay === 'none') {
+    } else if (data.post_hint === 'link' && thumbnailDisplay === 'none' && data.thumbnail !== 'default') {
         setThumbnailDisplay('block')
     }
 
