@@ -15,6 +15,7 @@ Reddit React UI
 - **React** — 16.12.0 with Hooks
 - **Babel** — ES6 syntax, Airbnb & React/Recommended config
 - **Webpack**  — Hot Reloading, Code Splitting, Optimized Build
+- **Image Loader**  — Optimized Image Loading for Webpack
 - **CSS** — Styled Components, CSS
 - **Lint** — ESlint
 
