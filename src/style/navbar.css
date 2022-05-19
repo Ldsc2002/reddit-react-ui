@@ -6,3 +6,53 @@
 .navbar {
     padding: 4px 0px 4px 0px;
 }
+
+.search-bar {
+    width: 656px;
+    height: 34px;
+}
+
+.search-bar input{
+    font-size: 14px;
+    background-color: rgb(245, 246, 247);
+    border-radius: 2px;
+    border-color: rgb(236, 236, 236);
+}
+ .nav-container {
+    margin-left: 20%;
+    display: flex;
+    width: 100%;
+}
+
+.account-btn {
+    border-radius: 16px;
+    width: 120px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.signup-btn:hover {
+    filter: brightness(1.1);
+}
+
+.login-btn:hover {
+    background-color: #c3dbf7;
+}
+
+.login-btn {
+    margin-left: auto;
+    background-color: white;
+    color: #0a62c8;
+    border: solid 1px;
+    border-color: #0a62c8;
+}
+
+.signup-btn {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #0a62c8;
+    color: white;
+    border: solid 1px;
+    border-color: #0a62c8;
+}
