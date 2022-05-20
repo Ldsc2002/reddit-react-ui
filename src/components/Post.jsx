@@ -9,7 +9,6 @@ import shareImg from '../../src/images/share.png'
 import saveImg from '../../src/images/save.png'
 import moreImg from '../../src/images/more.png'
 
-
 function Post({ data }) {
     const [score, setScore] = useState(0)
     const [comments, setComments] = useState(0)
