@@ -13,7 +13,7 @@ function Sidebar() {
     ]
 
     return (
-        <div>
+        <div className='sidebar-content'>
             <div className="sidebar-container">
                 <div className="text-with-image">
                     <img alt="" src={backgroundImg} />

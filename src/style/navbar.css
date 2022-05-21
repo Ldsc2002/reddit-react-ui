@@ -3,12 +3,31 @@
     margin: 0px 0px 0px 20px;
 }
 
+@media screen and (max-width: 1200px) {
+    .navbar-brand {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-container {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nav-container {
+        margin-left: 20%;
+    }
+}
+
 .navbar {
     padding: 4px 0px 4px 0px;
 }
 
 .search-bar {
-    width: 656px;
+    width: 60%;
     height: 34px;
 }
 
@@ -19,7 +38,6 @@
     border-color: rgb(236, 236, 236);
 }
  .nav-container {
-    margin-left: 20%;
     display: flex;
     width: 100%;
 }
